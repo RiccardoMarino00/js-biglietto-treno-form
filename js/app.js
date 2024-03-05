@@ -16,11 +16,28 @@ bottoneInvia.addEventListener("click", function () {
       // (km * 0.21 euro)
       const prezzoIntero = chilometriDaPercorrere * 0.21
       console.log("Il prezzo intero del biglietto è " + prezzoIntero.toFixed(2) + " Euro")
+    // Prezzo biglietto scontato minorenne
+      // calcolo sconto (prezzo intero * 0.20) e calcolo prezzo scontato minorenne (prezzo intero - sconto minorenne)
+      if (anniPasseggero <= 17){
+        const scontoMinorenne = prezzoIntero * 0.20
+        const prezzoScontatoMinorenne = prezzoIntero - scontoMinorenne
+        console.log("Il prezzo del biglietto scontato per minorenne è " + prezzoScontatoMinorenne.toFixed(2) + " Euro")
+      }
+    // Prezzo biglietto scontato over
+      // calcolo sconto (prezzo intero * 0.20) e calcolo prezzo scontato over (prezzo intero - sconto over)
+      else if (anniPasseggero >= 65){
+        const scontoOver = prezzoIntero * 0.40
+        const prezzoScontatoOver =  prezzoIntero - scontoOver
+        console.log("Il prezzo del biglietto scontato per over 65 è " + prezzoScontatoOver.toFixed(2) + " Euro")
+
+      } else{
+        console.log("Il prezzo del biglietto è " + prezzoIntero.toFixed(2) + " Euro")
+
+      }
+      
 })
   
-// Prezzo biglietto scontato minorenne
-  // calcolo sconto (prezzo intero * 0.20)
-  // calcolo prezzo scontato (prezzo intero - sconto)
-// Prezzo biglietto scontato over
-  // calcolo sconto (prezzo intero * 0.20)
-  // calcolo prezzo scontato (prezzo intero - sconto)
+
+  
+
+  
