@@ -21,14 +21,14 @@ bottoneInvia.addEventListener("click", function () {
     
     // Prezzo biglietto scontato minorenne
       // calcolo sconto (prezzo intero * 0.20) e calcolo prezzo scontato minorenne (prezzo intero - sconto minorenne)
-      if (anniPasseggero === minorenne){
+      if (anniPasseggero === minorenne.value){
         const scontoMinorenne = prezzoIntero * 0.20
         const prezzoScontatoMinorenne = prezzoIntero - scontoMinorenne
         console.log("Il prezzo del biglietto scontato per minorenne è " + prezzoScontatoMinorenne.toFixed(2) + " Euro");
       }
     // Prezzo biglietto scontato over
       // calcolo sconto (prezzo intero * 0.20) e calcolo prezzo scontato over (prezzo intero - sconto over)
-      else if (anniPasseggero === over65){
+      else if (anniPasseggero === over65.value){
         const scontoOver = prezzoIntero * 0.40
         const prezzoScontatoOver =  prezzoIntero - scontoOver
         console.log("Il prezzo del biglietto scontato per over 65 è " + prezzoScontatoOver.toFixed(2) + " Euro");
